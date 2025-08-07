@@ -1,5 +1,121 @@
 @use 'variables' as *;
-
-.card-course-item{
-    margin-top: 16px ;
-}
+// Reset một số mặc định trình duyệt
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  // NAVBAR
+  .navbar {
+    padding: 1rem;
+  
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 1.4rem;
+    }
+  
+    .dropdown-menu {
+        background-color: $dark-bg;
+      
+        .dropdown-item {
+          color: #fff;
+          padding: 0.5rem 1.2rem;
+      
+          &:hover {
+            background-color: lighten($dark-bg, 10%);
+          }
+        }
+      }
+  }
+  
+  // COURSE CARD
+  .card-course-item {
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+  
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+  
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+  
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #007bff;
+    }
+  
+    .card-text {
+      min-height: 60px;
+    }
+  
+    .btn-primary {
+      background-color: #007bff;
+      border: none;
+  
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  }
+  
+  // FORM
+  form {
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+  
+    label {
+      font-weight: 500;
+    }
+  
+    input {
+      padding: 0.5rem 0.75rem;
+    }
+  }
+  
+  // FOOTER
+  footer {
+    margin-top: 4rem;
+    padding: 2rem 0;
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+  
+    a {
+      color: #f8f9fa;
+      margin: 0 0.5rem;
+  
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  
+    .footer-info {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+  }
+  
+  .user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 8px;
+    border: 2px solid #fff;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    vertical-align: middle;
+  }
